@@ -11,24 +11,26 @@ public class ShoppingList {
 
         Console cons = System.console();
 
-        String item = "";
+        String input = "";
 
         System.out.println("Welcome to your shopping cart.");
 
         while (true) {
-            item = cons.readLine("> ").trim();
+            input = cons.readLine("> ").trim();
+            // String[] item = input.split(" ");
 
-            if (item.equals("stop")) {
+            if (input.equals("stop")) {
+                System.out.println("Thank you for shopping with us.");
                 break;
-            } else if (item.equals("list")) {
+            } else if (input.equals("list")) {
                 if (shoppingList.size() < 1) {
                     System.out.println("Your cart is empty");
                 } else {
                     for (int i = 0; i < shoppingList.size(); i++) {
-                        System.out.printf("%d. %s", (i + 1), item);
+                        System.out.printf("%d. %s", (i + 1), input);
                     }
                 }
-            } else if (item.equals("add")) {
+            } else if (input.equals("add")) {
 
             }
         }
